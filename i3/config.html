@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC '-//IETF//DTD HTML//EN'>
+<!-autotranslation from ASCII or ISO-8859.1 by Gary Kline, kline@thought.org--->
+<! @(#) config.html translated from config !>
+<HTML>
+  <HEAD>
+    <TITLE>  <!your title here -->  </TITLE>
+    <! your header lines here -->
+  </HEAD>
+
+<META NAME="Keywords" CONTENT="whatever">
+ <META NAME="revisit-after" CONTENT="7 days">
+ <META NAME="author" content="Gary Kline">
+ <META NAME="copyright" content="� Thought Unlimited">
+<BODY BGCOLOR="#FFFFFF" LINK="#00FFFF" VLINK="#006633"><FONT SIZE="4">
+<BLOCKQUOTE>
+<BLOCKQUOTE>
+<BLOCKQUOTE>
+<BLOCKQUOTE>
+<P>
+
+#Mod Key 
+set $mod Mod4
+<P>
+
+#..........
+#Font
+#..........
+<P>
+
+# Font for window titles.
+font pango: Inconsolata for Powerline Regular 10
+<P>
+
+#..........
+#Colors
+#..........
+<P>
+
+set $back               #1d1F21
+set $black              #282A2E
+set $grey               #373B41
+set $lightgrey          #707880
+set $white              #C5C8C6
+set $yellow             #F0C674
+set $red                #CC6666
+set $darkred            #A54242
+set $green              #B5BD56
+<P>
+
+# border colors:        border: bg:     text:   indicator:
+#client.focused         #493757 #453452 #FFFFFF #523445
+client.focused          #285577 #285577 #FFFFFF #285577
+client.focused_inactive #4F4E43 #49483E #BFBFBF #49483E
+client.unfocused        #000000 #000000 #888888 #000000
+client.urgent           #662B32 #58252B #F4BF75 #58252B
+<P>
+
+#..........
+#Variables
+#..........
+<P>
+
+set $workspace1 &ldquo;1:&rdquo;
+set $workspace2 &ldquo;2:&rdquo;
+set $workspace5 &ldquo;5:&rdquo;
+set $workspace4 &ldquo;4:&rdquo;
+set $workspace3 &ldquo;3:&rdquo;
+set $workspace10 &ldquo;10:&rdquo;
+<P>
+
+#.........
+#Assigns
+#.........
+<P>
+
+#assign [class=&ldquo;Classname&rdquo;] $workspace1 (get properties with xprop)
+assign [class=&ldquo;Firefox&rdquo;] $workspace2
+assign [class=&ldquo;Deadbeef&rdquo;] $workspace10
+assign [class=&ldquo;Eclipse&rdquo;] $workspace4
+assign [class=&ldquo;sublime_text&rdquo;] $workspace3
+#.........
+#Startup
+#.........
+<P>
+
+exec_always feh --bg-scale feh --bg-scale /home/crow/Pictures/i3/i3.jpg 
+exec_always compton --config /home/crow//.config/compton/config
+<P>
+
+#..........
+#i3 Options
+#..........
+hide_edge_borders both
+<P>
+
+#..........
+#Key-Bindings
+#..........
+<P>
+
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity &ldquo;85&rdquo; -bw 0 -bc &ldquo;$lih&rdquo; -bg &ldquo;$grey&rdquo; -fg &ldquo;$yellow&rdquo; -hlbg &ldquo;$grey&rdquo; -hlfg &ldquo;$red&rdquo; -font &ldquo;System San Francisco Display 18&rdquo;
+<P>
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+<P>
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+<P>
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+<P>
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+<P>
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+<P>
+
+# split in horizontal orientation
+bindsym $mod+h split h
+<P>
+
+# split in vertical orientation
+bindsym $mod+v split v
+<P>
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+<P>
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+<P>
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+<P>
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+<P>
+
+# focus the parent container
+bindsym $mod+a focus parent
+<P>
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+<P>
+
+# kill focused window
+bindsym $mod+Shift+q kill
+<P>
+
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace $workspace10
+<P>
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace %workspace5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+<P>
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec &ldquo;i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'&rdquo;
+<P>
+
+bindsym $mod+r mode &ldquo;resize&rdquo;
+<P>
+
+bindsym $mod+x exec lock
+<P>
+
+#.........
+#Blocks
+#.........
+<P>
+
+# resize window (you can also use the mouse for that)
+mode &ldquo;resize&rdquo; {
+        # These bindings trigger as soon as you enter the resize mode
+<P>
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+<P>
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+<P>
+
+        # back to normal: Enter or Escape
+        bindsym Return mode &ldquo;default&rdquo;
+        bindsym Escape mode &ldquo;default&rdquo;
+}
+<P>
+
+#..........
+#Bar
+#..........
+<P>
+
+bar {
+        mode dock
+        position bottom
+        font pango: ohsnapu 10
+#       font -xos4-terminusicons2-medium-r-normal--12-120-72-72-c-60-iso8859-1
+    workspace_buttons yes
+    separator_symbol &rdquo;|&ldquo;
+        status_command /home/crow//.config/i3blocks/conky-i3bar
+    tray_output none
+    colors {
+      background #150b30 
+      statusline #807878
+      focused_workspace #150b30 #150b30 #3dafcb
+      active_workspace #807878 #150b30 #150b30
+      inactive_workspace #150b30 #150b30 #807878
+      urgent_workspace #7627a5 #7627a5 #150b30
+        }
+}
+<P>
+
+
+
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+</FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,44 @@
+[global_config]
+  geometry_hinting = False
+  title_font = Terminus 12
+  title_inactive_bg_color = "#282828"
+  title_inactive_fg_color = "#ffffff"
+  title_receive_bg_color = "#2a2f47"
+  title_receive_fg_color = "#c5c8c6"
+  title_transmit_bg_color = "#282828"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[Theme 1]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 3f83a4e5-92c6-4d45-bc8e-05e8bd4e605a
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 386:187
+      size = 574, 354
+      title = crow@Magpie:~
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 3f83a4e5-92c6-4d45-bc8e-05e8bd4e605a
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_image = None
+    cursor_color = "#b3ff1d"
+    font = Inconsolata Bold 12
+    foreground_color = "#ffffff"
+    palette = "#393939:#c72d41:#98ff1d:#fac174:#0099bc:#5b1e35:#3ceac9:#4f585d:#2e3537:#ff5d4a:#b3ff1d:#ffaa0f:#5cdede:#be4773:#3ae8c7:#85919b"
