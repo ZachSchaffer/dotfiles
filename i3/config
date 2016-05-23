@@ -99,7 +99,7 @@ bindsym XF86AudioPrev exec playerctl previous
 #..........
 
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 50 -padding 50 -opacity "100" -bw 0 -bc "#FFFFFF" -bg "#394042" -fg "$default" -hlbg "#394042" -hlfg "$red" -font "Cousine 14"
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 50 -padding 50 -opacity "100" -bw 0 -bc "#ffd5e7" -bg "#2b2836" -fg "#FFB5D5" -hlbg "#2b2836" -hlfg "#C8A3FC" -font "Cousine 14"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -152,7 +152,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
