@@ -1,10 +1,9 @@
 [options]
-font= Roboto Mono for Powerline Regular 10.5
+font= Inconsolata for Powerline Regular 12
 clickable_url = true
 padding = 0
 
 
-#20% background transparency (requires a compositor)
 background = rgba(63, 63, 63)
 
 # if unset, will reverse foreground and background

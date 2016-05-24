@@ -63,15 +63,19 @@ assign [class="Spotify"] $workspace10
 assign [class="Eclipse"] $workspace4
 assign [class="sublime_text"] $workspace3
 assign [class="Atom"] $workspace3
-assign [class="jetbrains-idea-ce"] $workspace4
+assign [class="jetbrains-idea-ce"] $workswall3
 
 #.........
 #Startup
 #.........
 
 #exec_always feh --bg-scale feh --bg-scale /home/crow/Pictures/i3/best.png
-exec_always feh --bg-scale feh --bg-scale /home/crow/Pictures/i3/firewatch2.jpg
+exec_always feh --bg-scale feh --bg-scale /home/crow/Pictures/i3/wall4.png
 exec_always compton --config /home/crow//.config/compton/config
+exec_always xset fp+ $HOME/.fonts/misc
+exec_always xset fp+ $HOME/.fonts/ohsnap
+exec_always xset fp+ $HOME/.fonts/terminesspowerline
+
 
 #..........
 #i3 Options
@@ -221,27 +225,6 @@ mode "resize" {
 #..........
 #Bar
 #..........
-
 bar {
-#    verbose
-    status_command i3blocks
-
-
-    font pango: San Francisco Bold 10.6
-    strip_workspace_numbers yes
-    separator_symbol ">>"
-    position top
-
-    colors {
-        statusline         #FFFFFF
-        background         #282828
-        separator          #FF4D4D
-
-#                          BORDER       BACKGROUND   TEXT
-        focused_workspace  #282828      #FF4D4D     #EBDBB2
-        inactive_workspace #282828      #282828     #989898
-        active_workspace   #282828      #282828     $default
-        urgent_workspace   $darkred     $darkred    $black
-        binding_mode       #282828      #282828     #3AE8C7
-    }
+   i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
 }
