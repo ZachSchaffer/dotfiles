@@ -1,0 +1,45 @@
+[options]
+font = Inconsolata 24
+
+[colors]
+
+background = #0D0221
+
+foreground = #47BAE8
+
+cursorColor = #EEFFFF
+
+color0 = #0D0221
+
+color1 = #F0719B
+
+color2 = #5AF7B0
+
+color3 = #FFA56B
+
+color4 = #2DE2E6
+
+color5 = #C792EA
+
+color6 = #89DDFF
+
+color7 = #EEFFFF
+
+color8 = #354274
+
+color9 = #F02E6E
+
+color10 = #2CE592
+
+color11 = #FF8537
+
+color12 = #F706CF
+
+color13 = #A742EA
+
+color14 = #47BAE8
+
+color15 = #DEE6E7
+
+color16 = #2A335A
+
